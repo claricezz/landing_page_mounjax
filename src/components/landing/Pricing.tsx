@@ -56,7 +56,25 @@ const Pricing = () => {
     "Garantia de 30 dias",
   ];*/
 
-  return (
+
+    const trackBuyClick = (plan: {
+        name: string;
+        duration: string;
+        price: string;
+        bottles: number;
+    }) => {
+        if (typeof window !== "undefined" && "gtag" in window) {
+            window.gtag("event", "click_comprar_agora", {
+                event_category: "ecommerce_cta",
+                event_label: plan.name,
+                plano: plan.duration,
+                preco: plan.price,
+                frascos: plan.bottles,
+            });
+        }
+    };
+
+    return (
     <section id="kits" className="py-20 relative">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/5 to-transparent" />
       
@@ -152,14 +170,18 @@ const Pricing = () => {
                 </ul>*/}
 
                 {/* CTA */}
-                <Button
-                  variant={plan.popular ? "hero" : "success"}
-                  size="lg"
-                  className="w-full"
-                  onClick={() => window.open(plan.link, "_blank")}
-                >
-                  Comprar Agora
-                </Button>
+                  <Button
+                      variant={plan.popular ? "hero" : "success"}
+                      size="lg"
+                      className="w-full"
+                      onClick={() => {
+                          trackBuyClick(plan);
+                          window.open(plan.link, "_blank");
+                      }}
+                  >
+                      Comprar Agora
+                  </Button>
+
               </div>
             </motion.div>
           ))}
