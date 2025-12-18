@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { Check, Star, Truck, Gift } from "lucide-react";
+import { Star, Truck,  } from "lucide-react";
 
 const Pricing = () => {
   const plans = [
@@ -20,7 +20,7 @@ const Pricing = () => {
       originalPrice: "R$392",
       price: "R$197",
       installment: "12x de R$19,78",
-      link: "https://app.monetizze.com.br/checkout/DAJ338770",
+      link: "https://app.monetizze.com.br/r/ANR25657360?u=c&pl=AJ338770",
       popular: true,
       bottles: 3,
       savings: "Economia de R$195",
@@ -31,7 +31,7 @@ const Pricing = () => {
       originalPrice: "R$467",
       price: "R$247",
       installment: "12x de R$24,80",
-      link: "https://app.monetizze.com.br/checkout/DMU338771",
+      link: "https://app.monetizze.com.br/r/ANR25657360?u=c&pl=MU338771",
       popular: false,
       bottles: 5,
       savings: "Economia de R$220",
@@ -42,19 +42,19 @@ const Pricing = () => {
       originalPrice: "R$597",
       price: "R$377",
       installment: "12x de R$37,85",
-      link: "https://app.monetizze.com.br/checkout/DUX338772",
+      link: "https://app.monetizze.com.br/r/ANR25657360?u=c&pl=UX338772",
       popular: false,
       bottles: 8,
       savings: "Maior economia",
     },
   ];
 
-  const features = [
+  /*const features = [
     "Frete Grátis",
     "E-book de Receitas",
     "App de Acompanhamento",
     "Garantia de 30 dias",
-  ];
+  ];*/
 
   return (
     <section id="kits" className="py-20 relative">
@@ -138,7 +138,7 @@ const Pricing = () => {
                 </div>
 
                 {/* Features */}
-                <ul className="space-y-3 mb-6 flex-grow">
+               {/* <ul className="space-y-3 mb-6 flex-grow">
                   {features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm text-muted-foreground">
                       <Check className="w-4 h-4 text-primary flex-shrink-0" />
@@ -149,7 +149,7 @@ const Pricing = () => {
                     <Gift className="w-4 h-4 flex-shrink-0" />
                     + Bônus Exclusivos
                   </li>
-                </ul>
+                </ul>*/}
 
                 {/* CTA */}
                 <Button

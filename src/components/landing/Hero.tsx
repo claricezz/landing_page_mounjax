@@ -76,12 +76,11 @@ const Hero = () => {
                 <span>Dados Protegidos</span>
               </div>
               <div className="flex items-center gap-2">
-                <CreditCard className="w-4 h-4 text-primary" />
-                <span>Todos os Cartões</span>
-              </div>
-              <div className="flex items-center gap-2">
-                <Shield className="w-4 h-4 text-primary" />
-                <span>Compra Segura</span>
+                  <CreditCard className="w-8 h-4 text-primary"/>
+                  <span>Todos os Cartões</span>
+
+                  <Shield className="w-4 h-4 text-primary"/>
+                  <span>Compra Segura</span>
               </div>
             </motion.div>
           </motion.div>
